@@ -28,4 +28,8 @@ describe('AppComponent', () => {
     const compiled = fixture.nativeElement;
     expect(compiled.querySelector('.content span').textContent).toContain('actions-outline app is running!');
   });
+
+  it('should fail this test', () => {
+    expect(false).toBeTruthy();
+  });
 });
