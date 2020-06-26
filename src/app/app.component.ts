@@ -1,3 +1,4 @@
+/* eslint max-lines-per-function:[2,20] */
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'actions-outline';
+
 }
