@@ -8,5 +8,26 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'actions-outline';
+  fail() {
+    let one = 1;
+    one = 1;
+    one = 1;
+    one = 1;
+    one = 1;
+    one = 1;
+    one = 1;
+    one = 1;
+    one = 1;
+    one = 1;
+    one = 1;
+    one = 1;
+    one = 1;
+    one = 1;
+    one = 1;
+    one = 1;
+    one = 1;
+    one = 1;
+    one = 1;
+  }
 
 }
