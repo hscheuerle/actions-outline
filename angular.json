@@ -91,6 +91,13 @@
               "src/styles.css"
             ],
             "scripts": []
+          },
+          "configurations": {
+            "ci": {
+              "watch": false,
+              "progress": false,
+              "browsers": "ChromeHeadlessCI"
+            }
           }
         },
         "lint": {
@@ -119,6 +126,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "actions-outline"
+    }
+  },
+  "defaultProject": "actions-outline",
+  "cli": {
+    "analytics": false
+  }
 }
