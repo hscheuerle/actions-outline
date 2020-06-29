@@ -1,2 +1,2 @@
-@domain/dom:
-- src/app/**/8
+dom:
+- src/app/**/*
