@@ -21,7 +21,7 @@ jobs:
             repo: context.repo.repo,
             labels: ['coolbeans1', 'coolbeans2']
           })
-          octokit.issues.removeLabel({
+          github.issues.removeLabel({
             owner: context.repo.owner,
             repo: context.repo.repo,
             issue_number: context.issue.number,
