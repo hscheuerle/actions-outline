@@ -15,6 +15,7 @@ jobs:
       with:
         github-token: ${{secrets.GITHUB_TOKEN}}
         script: |
+          echo "${{ context.payload.pull_request }}"
           github.issues.addLabels({
             issue_number: ${{ github.event.number }},
             owner: context.repo.owner,
