@@ -19,5 +19,11 @@ jobs:
             issue_number: context.issue.number,
             owner: context.repo.owner,
             repo: context.repo.repo,
-            labels: ['Triagesync']
+            labels: ['coolbeans1', 'coolbeans2']
           })
+          octokit.issues.removeLabel({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            issue_number: context.issue.number,
+            name: 'Triagesync',
+          });
