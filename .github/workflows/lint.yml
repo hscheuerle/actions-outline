@@ -1,5 +1,5 @@
 name: CI
-on: push
+on: pull_request
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -15,10 +15,9 @@ jobs:
       with:
         github-token: ${{secrets.GITHUB_TOKEN}}
         script: |
-          echo "context.payload.pull_request"
-          github.issues.addLabels({
-            issue_number: github.event.number,
+          await github.issues.createComment({
+            issue_number: context.issue.number,
             owner: context.repo.owner,
             repo: context.repo.repo,
-            labels: ['lintfailure']
+            body: 'Welcome, new contributor!'
           })
