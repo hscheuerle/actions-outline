@@ -9,3 +9,15 @@ jobs:
       run: npm ci
     - name: Run ESLint
       run: npm run lint2
+    - name: Label Failure if fails lint
+      if: ${{ failure() }}
+    - uses: actions/github-script@v2
+      with:
+        github-token: ${{secrets.GITHUB_TOKEN}}
+        script: |
+          github.issues.addLabels({
+            issue_number: context.issue.number,
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            labels: ['lint:failure']
+          })
