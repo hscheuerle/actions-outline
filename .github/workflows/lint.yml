@@ -15,9 +15,9 @@ jobs:
       with:
         github-token: ${{secrets.GITHUB_TOKEN}}
         script: |
-          echo "${{ context.payload.pull_request }}"
+          echo "context.payload.pull_request"
           github.issues.addLabels({
-            issue_number: ${{ github.event.number }},
+            issue_number: github.event.number,
             owner: context.repo.owner,
             repo: context.repo.repo,
             labels: ['lintfailure']
