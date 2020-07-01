@@ -11,7 +11,7 @@ jobs:
       run: npm run lint2
     - name: Label Failure if fails lint
       if: ${{ failure() }}
-    - uses: actions/github-script@v2
+      uses: actions/github-script@v2
       with:
         github-token: ${{secrets.GITHUB_TOKEN}}
         script: |
